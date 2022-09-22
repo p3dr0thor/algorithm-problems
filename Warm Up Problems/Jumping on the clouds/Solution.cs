@@ -29,7 +29,7 @@ class Result
 	
     public static int jumpingOnClouds(List<int> c)
     {
-		///edge case
+	///edge case
         if (c.Count <= 3)
             return 1;
 
@@ -48,10 +48,9 @@ class Result
             }
         }
 		
-		//edge case 1 0 0
+	//edge case 1 0 0
         if (c[c.Count - 3] == 1)
             totalJumps++;
-
 
         return totalJumps;
     }
