@@ -52,7 +52,6 @@ class Result
         if (c[c.Count - 3] == 1)
             totalJumps++;
 
-
         return totalJumps;
     }
 
