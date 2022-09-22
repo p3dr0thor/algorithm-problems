@@ -1,0 +1,78 @@
+using System.CodeDom.Compiler;
+using System.Collections.Generic;
+using System.Collections;
+using System.ComponentModel;
+using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Runtime.Serialization;
+using System.Text.RegularExpressions;
+using System.Text;
+using System;
+
+class Result
+{
+
+    /*
+     * Complete the 'jumpingOnClouds' function below.
+     *
+     * The function is expected to return an INTEGER.
+     * The function accepts INTEGER_ARRAY c as parameter.
+     */
+    
+	//Time complexity: O(n)
+	//Space complexity: O(n)
+		
+	//Solution: Solve edge cases and if possible ((0 1 0) or (0 0 0)) jump 2 clouds, else (0 0 1) jump 1 cloud
+	
+    public static int jumpingOnClouds(List<int> c)
+    {
+		///edge case
+        if (c.Count <= 3)
+            return 1;
+
+        int totalJumps = 0;
+
+        for (int i = 0; i < c.Count - 2; i++)
+        {
+            if (c[i + 2] == 0)
+            {
+                totalJumps++;
+                i += 1;
+            }
+            else
+            {
+                totalJumps++;
+            }
+        }
+		
+		//edge case 1 0 0
+        if (c[c.Count - 3] == 1)
+            totalJumps++;
+
+
+        return totalJumps;
+    }
+
+}
+
+class Solution
+{
+    public static void Main(string[] args)
+    {
+        TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+
+        int n = Convert.ToInt32(Console.ReadLine().Trim());
+
+        List<int> c = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(cTemp => Convert.ToInt32(cTemp)).ToList();
+
+        int result = Result.jumpingOnClouds(c);
+
+        textWriter.WriteLine(result);
+
+        textWriter.Flush();
+        textWriter.Close();
+    }
+}

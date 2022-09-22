@@ -26,6 +26,8 @@ class Result
 	 
 	 //Time complexity: O(n)
 	 //Space complexity: O(n) (path size)
+	 
+	 //Solution: Solve edge cases and start with i=1, if current value is 0 and the last position is uphill, the valley has been finalized.
 
     public static int countingValleys(int steps, string path)
     {
