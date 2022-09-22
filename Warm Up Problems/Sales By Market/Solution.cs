@@ -23,7 +23,11 @@ class Result
      *  1. INTEGER n
      *  2. INTEGER_ARRAY ar
      */
-
+    
+    //Time complexity: O(n)
+        //Dictionary access: O(1)
+    //Space complexity: O(n)
+        //Worst case: 9  [1,2,3,4,5,6,7,8,9]
     public static int sockMerchant(int n, List<int> ar)
     {
         var hashSocks = new Dictionary<int,int>();
