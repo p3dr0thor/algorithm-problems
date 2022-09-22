@@ -27,7 +27,7 @@ class Result
 	//Time complexity: O(s.Length + n % s.Length)
 	//Space complexity: O(s.length)
 	 
-	//Solution: Solve edge case and count number of 'a' in 'string s', then multiply by the number of times that 'string s' is fully repeated, then iterate over the remainder subset of 'string s' to find 'a' on this subset.
+	//Solution: Solve edge case and count number of 'a' in 'string s', then multiply by the number of times that 'string s' is completely repeated, then iterate over the remainder subset of 'string s' to find 'a' on this subset.
 
     public static long repeatedString(string s, long n)
     {
