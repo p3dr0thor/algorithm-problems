@@ -24,8 +24,8 @@ class Result
      *  2. STRING path
      */
 	 
-	 //Time complexity: O(n)
-	 //Space complexity: O(n) (path size)
+     //Time complexity: O(n)
+     //Space complexity: O(n) (path size)
 
     public static int countingValleys(int steps, string path)
     {
