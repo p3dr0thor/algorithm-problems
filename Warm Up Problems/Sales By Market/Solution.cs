@@ -25,11 +25,11 @@ class Result
      */
     
     //Time complexity: O(n)
-        //Dictionary access: O(1)
+    //Dictionary access: O(1)
     //Space complexity: O(n)
-        //Worst case: 9  [1,2,3,4,5,6,7,8,9]
+    //Worst case: 9  [1,2,3,4,5,6,7,8,9]
 		
-	//Solution: if not exists on dictionary, add with value "1", else, remove the index because the pair has been found
+    //Solution: if not exists on dictionary, add with value "1", else, remove the index because the pair has been found
     public static int sockMerchant(int n, List<int> ar)
     {
         var hashSocks = new Dictionary<int,int>();
