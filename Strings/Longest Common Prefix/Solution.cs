@@ -1,6 +1,6 @@
 public class Solution {
 	
-	//Time complexity: O(m+n)
+	//Time complexity: O(m*n)
 	//Space complexity: O(1) (min length of strs)
 	//Solution: Iterate over characters of all words instead of compare word by word. At the first ocurrence of different char at position [i], return prefix.
     public string LongestCommonPrefix(string[] strs) {
