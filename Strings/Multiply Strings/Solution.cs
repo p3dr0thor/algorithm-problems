@@ -1,7 +1,7 @@
 
 //Time complexity: O(m*n)
 //Space complexity: O(m+n) (result array)
-//Solution: Convert char <--> int with ASCII offset. Multiply numbers and add partial result on correct position and calculate extra sum for next iteration.
+//Solution: Convert char <--> int with ASCII offset. Multiply numbers, add partial result on correct position and calculate extra sum for next iteration.
 //Remove leading '0' and format output with trim();
 
 public class Solution {
